@@ -1,7 +1,12 @@
 {
-  "name": "cripto-wc",
+  "name": "criptowc",
   "version": "0.0.0",
   "private": true,
+  "description": "Cripto Web Component",
+  "author": "Pasha Web",
+  "license": "MIT",
+  "main": "dist/criptowc.js",
+  "module": "dist/criptowc.mjs",
   "files": [
     "dist",
     "src"
@@ -22,6 +27,7 @@
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@babel/types": "^7.20.7",
     "@types/jsdom": "^20.0.1",
     "@types/node": "^18.11.12",
     "@vitejs/plugin-vue": "^4.0.0",
@@ -34,6 +40,7 @@
     "start-server-and-test": "^1.15.2",
     "typescript": "~4.7.4",
     "vite": "^4.0.0",
+    "vite-plugin-dts": "^1.7.3",
     "vitest": "^0.25.6",
     "vue-tsc": "^1.0.12"
   }
