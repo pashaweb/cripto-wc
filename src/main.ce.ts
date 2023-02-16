@@ -1,5 +1,5 @@
 import { defineCustomElement } from 'vue'
-import VueCoinTracker from './components/coin-tracker.ce.vue';
+import VueCoinTracker from './components/wc-cripto.ce.vue';
 
 const CoinTracker = defineCustomElement(VueCoinTracker)
 

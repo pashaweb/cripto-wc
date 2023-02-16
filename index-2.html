@@ -25,16 +25,24 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="http://127.0.0.1:4173/index.umd.js"></script>
+    <script type="module" src="http://127.0.0.1:4173/criptowc.umd.js"></script>
   <coin-tracker  backround="yellow" pair="SOL-USD"  id="coin-tracker">
-    <h2 slot="header">My Module</h2>
+    <slot name="header">
+      <h2>My mjjkgbkjbj Module</h2>
+    </slot>
   </coin-tracker>
-  <!-- <script type="module">
-    import { register} from "./dist/index.js";
-    console.log("register", register)
-    register();
 
-  </script> -->
+    <button onclick="hadale()">click</button>
+    <script>
+      function hadale() {
+        console.log("hadale")
+        const coinTracker = document.querySelector("coin-tracker");
+        console.log("coinTracker", coinTracker)
+        coinTracker.setAttribute("pair", "BTC-USD");
+        coinTracker.setAttribute("backround", "red");
+      }
+    </script>
+
   
   </body>
 </html>

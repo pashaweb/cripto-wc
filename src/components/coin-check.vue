@@ -14,7 +14,7 @@ const {coin} = toRefs(props);
 </script>
 
 <template>
-    <Transition name="out-in">
+
         <div :key="coin.formated">
             <div class="inner" >
                 <div>{{coin.name}}</div>
@@ -26,7 +26,7 @@ const {coin} = toRefs(props);
                                 
             </div>
         </div>
-    </Transition>
+
    
 </template>
 

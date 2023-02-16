@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import CoinTracker from './components/coin-tracker.ce.vue';
+import WcCripto from './components/wc-cripto.ce.vue';
 </script>
 
 <template>
-    <CoinTracker backround="yellow" pair="SOL-USD" />
+<wc-cripto />
 </template>
 
 <style>
