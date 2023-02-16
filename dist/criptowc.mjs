@@ -3159,12 +3159,12 @@ const Us = (...e) => {
   setup(e) {
     const t = e, { coin: n } = Or(t);
     return (s, i) => (Me(), lt("div", {
-      key: ve(n).formated
+      key: ve(n).formatted
     }, [
       q("div", vl, [
         q("div", null, Ht(ve(n).name), 1),
         q("div", bl, [
-          q("div", null, Ht(ve(n).formated), 1),
+          q("div", null, Ht(ve(n).formatted), 1),
           oe(hl, {
             amount: ve(n).money ?? 0,
             name: ve(n).name ?? null
@@ -3184,14 +3184,14 @@ const yl = { class: "sub" }, kl = /* @__PURE__ */ Tt({
   setup(e) {
     const t = e;
     Pi((y) => ({
-      "7ccc8492": e.backround
+      "0c180a26": e.backround
     }));
     const n = bt(() => t.complex ?? null), s = "https://api.coinbase.com/v2/prices", i = bn(new Date()), r = "BTC-USD", o = "ETH-USD", c = Je({}), f = Je({}), u = Je({});
     async function _(y) {
       const M = await (await fetch(`${s}/${y}/spot`)).json();
       return {
         money: parseFloat(M.data.amount),
-        formated: Intl.NumberFormat("en-US", {
+        formatted: Intl.NumberFormat("en-US", {
           style: "currency",
           currency: "USD"
         }).format(M.data.amount),
@@ -3200,9 +3200,9 @@ const yl = { class: "sub" }, kl = /* @__PURE__ */ Tt({
     }
     async function b() {
       const y = await _(r), T = await _(o);
-      if (console.log(y, T), f.formated = y.formated, f.money = y.money, f.name = y.name, u.formated = T.formated, u.money = T.money, u.name = T.name, i.value = new Date(), t.pair) {
+      if (f.formatted = y.formatted, f.money = y.money, f.name = y.name, u.formatted = T.formatted, u.money = T.money, u.name = T.name, i.value = new Date(), t.pair) {
         const M = await _(t.pair);
-        c.formated = M.formated, c.money = M.money, c.name = M.name;
+        c.formatted = M.formatted, c.money = M.money, c.name = M.name;
       }
     }
     return b(), setInterval(b, 5e3), (y, T) => (Me(), lt(ie, null, [
