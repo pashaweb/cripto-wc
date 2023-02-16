@@ -14,7 +14,7 @@ describe('HelloWorld', () => {
       coin:{
         name: "test",
         money: 1000,
-        formated: "1,000"
+        formatted: "1,000"
     }}
   })
     expect(wrapper.text()).toContain('test1,000')

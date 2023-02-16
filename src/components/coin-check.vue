@@ -6,7 +6,7 @@ const props = defineProps<{
     coin:{
         name: string;
         money: number;
-        formated: string;
+        formatted: string;
     }
 }>();
 
@@ -15,11 +15,11 @@ const {coin} = toRefs(props);
 
 <template>
 
-        <div :key="coin.formated">
+        <div :key="coin.formatted">
             <div class="inner" >
                 <div>{{coin.name}}</div>
                 <div class="val-and-arrow">
-                    <div>{{coin.formated}}</div>
+                    <div>{{coin.formatted}}</div>
                     <ArrowCheck :amount="coin.money ?? 0" :name="coin.name ?? null" />
                 </div>
                 

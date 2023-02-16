@@ -28,7 +28,7 @@ const ethPair = 'ETH-USD';
 const pass = reactive({} as any);
 
 interface moneyFormat {
-  formated: string;
+  formatted: string;
   money: number;
   name: string;
 }
@@ -41,7 +41,7 @@ async function getCoinPrice(pair: string): Promise<moneyFormat> {
   const res = await response.json();
   return {
     money: parseFloat(res.data.amount),
-    formated: Intl.NumberFormat('en-US', {
+    formatted: Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
     }).format(res.data.amount),
@@ -52,16 +52,16 @@ async function getCoinPrice(pair: string): Promise<moneyFormat> {
 async function setCoins() {
   const btcValue: moneyFormat = await getCoinPrice(btcPair);
   const ethValue: moneyFormat = await getCoinPrice(ethPair);
-  btc.formated = btcValue.formated;
+  btc.formatted = btcValue.formatted;
   btc.money = btcValue.money;
   btc.name = btcValue.name;
-  eth.formated = ethValue.formated;
+  eth.formatted = ethValue.formatted;
   eth.money = ethValue.money;
   eth.name = ethValue.name;
   date.value = new Date();
   if (props.pair) {
     const pairValue: moneyFormat = await getCoinPrice(props.pair);
-    pass.formated = pairValue.formated;
+    pass.formatted = pairValue.formatted;
     pass.money = pairValue.money;
     pass.name = pairValue.name;
   }
