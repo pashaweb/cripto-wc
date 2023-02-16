@@ -52,7 +52,6 @@ async function getCoinPrice(pair: string): Promise<moneyFormat> {
 async function setCoins() {
   const btcValue: moneyFormat = await getCoinPrice(btcPair);
   const ethValue: moneyFormat = await getCoinPrice(ethPair);
-  console.log(btcValue, ethValue);
   btc.formated = btcValue.formated;
   btc.money = btcValue.money;
   btc.name = btcValue.name;
